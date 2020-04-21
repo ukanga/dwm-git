@@ -45,7 +45,7 @@ md5sums=('939f403a71b6e85261d09fc3412269ee'
          'e8501d039a68e9a106233b1d096ac017'
          'c446b71a8b8cce25db86a47805500dfa'
          '61d820c506cf764f69b25d2e421a7705'
-         '56bb0aa9e39f3210bb187e4a0e0e90bb'
+         'b6d119efb5a04ab4d7c5571f035927fd'
          ) # so you can customize config.h
 
 pkgver(){
