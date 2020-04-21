@@ -15,11 +15,11 @@ index 535beca..0d9e8fd 100644
  static char normfgcolor[]           = "#bbbbbb";
 @@ -38,7 +38,7 @@ static const unsigned int alphas[][3]      = {
  };
- 
+
  /* tagging */
 -static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
-+static const char *tags[] = { "1", "2", "3", "", "5", "6", "7", "8", "9" };
- 
++static const char *tags[] = { "", "", "3", "", "5", "6", "", "", "" };
+
  static const Rule rules[] = {
  	/* xprop(1):
 @@ -47,6 +47,7 @@ static const Rule rules[] = {
@@ -29,7 +29,7 @@ index 535beca..0d9e8fd 100644
 +	{ "Slack",    NULL,       NULL,       1 << 3,       0,           -1 },
  	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
  };
- 
+
 @@ -82,11 +83,20 @@ static const Layout layouts[] = {
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
  static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
@@ -39,7 +39,7 @@ index 535beca..0d9e8fd 100644
 +static const char *mutevolume[] = { "pulsemixer", "--toggle-mute", NULL };
 +static const char *lowervolume[] = { "pulsemixer", "--change-volume", "-5", NULL };
 +#include <X11/XF86keysym.h>
- 
+
  static Key keys[] = {
  	/* modifier                     key        function        argument */
  	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
@@ -76,5 +76,5 @@ index 535beca..0d9e8fd 100644
 -	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 +	{ MODKEY|ShiftMask,             XK_c,      quit,           {0} },
  };
- 
+
  /* button definitions */
