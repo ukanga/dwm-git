@@ -1,6 +1,6 @@
 pkgname=dwm-git
 _pkgname=dwm
-pkgver=6.2.r1.gc82db69
+pkgver=6.2.r2.ga8e9513
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
@@ -45,7 +45,7 @@ md5sums=('939f403a71b6e85261d09fc3412269ee'
          'e8501d039a68e9a106233b1d096ac017'
          'c446b71a8b8cce25db86a47805500dfa'
          '61d820c506cf764f69b25d2e421a7705'
-         '5953db4d92d12e595f8461268592ca8f'
+         '0ee59c7be5f4a7fd0729c3f98b9a441b'
          ) # so you can customize config.h
 
 pkgver(){
