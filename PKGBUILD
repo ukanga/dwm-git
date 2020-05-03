@@ -1,6 +1,6 @@
 pkgname=dwm-git
 _pkgname=dwm
-pkgver=6.2.r2.ga8e9513
+pkgver=6.2.r5.gf09418b
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
@@ -14,38 +14,37 @@ provides=('dwm')
 conflicts=('dwm')
 source=(dwm.desktop
         "$_pkgname::git+http://git.suckless.org/dwm"
-        #config.h
         dwm-xrdb-6.2.diff
         dwm-alpha.diff
-        dwm-vanitygaps-20190508-6.2.diff
         dwm-autostart-20161205-bb3bd6f.diff
         dwm-emptyview-6.2.diff
         dwm-combo-6.1.diff
-        dwm-statuscolors-6.2.diff
         dwm-centeredmaster-20160719-56a31dc.diff
         dwm-gridmode-20170909-ceac8c9-1.diff
         dwm-cyclelayouts-20180524-6.2-1.diff
         dwm-pertag-6.2-1.diff
         dwm-hide_vacant_tags-6.2.diff
         dwm-activetagindicatorbar-6.2-1.diff
-        dwm-myconfig.diff
+        dwm-vanitygaps-20200503-9fc59bf.diff
+        dwm-statuscolors-20200503-25f74ad.diff
+        dwm-myconfig-20200503-8a2ef22.diff
         )
-md5sums=('939f403a71b6e85261d09fc3412269ee'
+md5sums=(939f403a71b6e85261d09fc3412269ee
          'SKIP'
-         '1fc4042932a74be58d58b50c3e5681a2'
-         'fd30653e7798999b701459ca2e8ff429'
-         '3ee6971e9c9bd495916083e49c597bb5'
-         'b50863cbb92ea2fbf60cf4474e30cb36'
-         '3c5c1d304c948d692082cf657e0b3b7c'
-         'b0a3ea638271f42d410bf9393ccce49d'
-         'a56ddfad8c3f882dd8b60ab8b2ec84ba'
-         '0051114992d940bc2ce1ed9ddcdcd8f8'
-         '8f3351056a226997e67c6ff58af32a72'
-         'de4197bcfba7af9d0517932c13f88fcf'
-         'e8501d039a68e9a106233b1d096ac017'
-         'c446b71a8b8cce25db86a47805500dfa'
-         '61d820c506cf764f69b25d2e421a7705'
-         'b6d119efb5a04ab4d7c5571f035927fd'
+         100f7463edcc80dcf6472ed30c76af22
+         fd30653e7798999b701459ca2e8ff429
+         b50863cbb92ea2fbf60cf4474e30cb36
+         3c5c1d304c948d692082cf657e0b3b7c
+         b0a3ea638271f42d410bf9393ccce49d
+         0051114992d940bc2ce1ed9ddcdcd8f8
+         8f3351056a226997e67c6ff58af32a72
+         de4197bcfba7af9d0517932c13f88fcf
+         e8501d039a68e9a106233b1d096ac017
+         c446b71a8b8cce25db86a47805500dfa
+         61d820c506cf764f69b25d2e421a7705
+         e26502e331d8db2c669fe6a1cbd0efa5
+         5835f93e81555436a4916a968478845a
+         8d67136ad428cadef08902ff1b438f36
          ) # so you can customize config.h
 
 pkgver(){
