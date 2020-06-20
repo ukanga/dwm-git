@@ -1,15 +1,15 @@
-From 9a292329b6a3a5b23cce29923e59092bd0698a5a Mon Sep 17 00:00:00 2001
+From 81e5a066a656e7f6290f0362f7d31667b2a73472 Mon Sep 17 00:00:00 2001
 From: Ukang'a Dickson <ukanga@users.noreply.github.com>
-Date: Tue, 9 Jun 2020 23:17:47 +0300
-Subject: [PATCH] Update patch
+Date: Sat, 20 Jun 2020 18:21:57 +0300
+Subject: [PATCH] Add playerctl play-pause binding
 
 ---
- config.def.h | 23 +++++++++++++++++------
+ config.def.h | 29 +++++++++++++++++++++--------
  dwm.c        | 18 ++++++++++++------
- 2 files changed, 29 insertions(+), 12 deletions(-)
+ 2 files changed, 33 insertions(+), 14 deletions(-)
 
 diff --git a/config.def.h b/config.def.h
-index bdaae11..dc20c87 100644
+index bdaae11..aaa2c70 100644
 --- a/config.def.h
 +++ b/config.def.h
 @@ -11,8 +11,8 @@ static const unsigned int gappov    = 10;       /* vert outer gap between window
@@ -41,14 +41,19 @@ index bdaae11..dc20c87 100644
  };
  
  /* layout(s) */
-@@ -89,11 +91,20 @@ static const Layout layouts[] = {
+@@ -87,13 +89,24 @@ static const Layout layouts[] = {
+ 
+ /* commands */
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
- static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
- static const char *termcmd[]  = { "st", NULL };
-+static const char *termcmd2[]  = { "st", "-e", "tmux-shell", NULL };
+-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
+-static const char *termcmd[]  = { "st", NULL };
++static const char *dmenucmd[]    = { "dmenu_run",  "-m",              dmenumon, "-fn", dmenufont, "-nb", normbgcolor, "-nf", normfgcolor, "-sb", selbordercolor, "-sf", selfgcolor, NULL };
++static const char *termcmd[]     = { "st",         NULL };
++static const char *termcmd2[]    = { "st", "-e",   "tmux-shell",      NULL };
 +static const char *raisevolume[] = { "pulsemixer", "--change-volume", "+5", NULL };
-+static const char *mutevolume[] = { "pulsemixer", "--toggle-mute", NULL };
++static const char *mutevolume[]  = { "pulsemixer", "--toggle-mute",   NULL };
 +static const char *lowervolume[] = { "pulsemixer", "--change-volume", "-5", NULL };
++static const char *playpause[]   = { "playerctl",  "play-pause",      NULL };
 +#include <X11/XF86keysym.h>
  
  static Key keys[] = {
@@ -59,10 +64,11 @@ index bdaae11..dc20c87 100644
 +	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = lowervolume } },
 +	{ 0,                            XF86XK_AudioMute, spawn,   {.v = mutevolume } },
 +	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v =raisevolume } },
++	{ 0,                            XK_F10,    spawn,          {.v =playpause } },
  	{ MODKEY,                       XK_b,      togglebar,      {0} },
  	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
  	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-@@ -110,7 +121,7 @@ static Key keys[] = {
+@@ -110,7 +123,7 @@ static Key keys[] = {
  	{ MODKEY|Mod4Mask,              XK_0,      togglegaps,     {0} },
  	{ MODKEY|Mod4Mask|ShiftMask,    XK_0,      defaultgaps,    {0} },
  	{ MODKEY,                       XK_y,      incrihgaps,     {.i = +1 } },
@@ -71,7 +77,7 @@ index bdaae11..dc20c87 100644
  	{ MODKEY|ControlMask,           XK_y,      incrivgaps,     {.i = +1 } },
  	{ MODKEY|ControlMask,           XK_o,      incrivgaps,     {.i = -1 } },
  	{ MODKEY|Mod4Mask,              XK_y,      incrohgaps,     {.i = +1 } },
-@@ -119,7 +130,7 @@ static Key keys[] = {
+@@ -119,7 +132,7 @@ static Key keys[] = {
  	{ MODKEY|ShiftMask,             XK_o,      incrovgaps,     {.i = -1 } },
  	{ MODKEY,                       XK_Return, zoom,           {0} },
  	{ MODKEY,                       XK_Tab,    view,           {0} },
@@ -80,7 +86,7 @@ index bdaae11..dc20c87 100644
  	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
  	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
  	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-@@ -146,7 +157,7 @@ static Key keys[] = {
+@@ -146,7 +159,7 @@ static Key keys[] = {
  	TAGKEYS(                        XK_7,                      6)
  	TAGKEYS(                        XK_8,                      7)
  	TAGKEYS(                        XK_9,                      8)
@@ -119,5 +125,5 @@ index e4a9313..ded8071 100644
      }
    }
 -- 
-2.27.0
+2.25.1
 

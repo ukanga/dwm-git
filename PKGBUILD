@@ -28,7 +28,7 @@ source=(dwm.desktop
         dwm-vanitygaps-20200503-9fc59bf.diff
         dwm-statuscolors-20200503-25f74ad.diff
         dwm-swallow-20200609-312bb44.diff
-        dwm-myconfig-20200609-9a29232.diff
+        dwm-myconfig-20200620-81e5a06.diff
         )
 md5sums=(939f403a71b6e85261d09fc3412269ee
          'SKIP'
@@ -46,7 +46,7 @@ md5sums=(939f403a71b6e85261d09fc3412269ee
          e26502e331d8db2c669fe6a1cbd0efa5
          5835f93e81555436a4916a968478845a
          0e165cee9f40d92d15b8049e579c6d30
-         773e95e1e4c354eb5a9db023239ff08c
+         2d28ed898b0662a4579146d660a2dfc0
          ) # so you can customize config.h
 
 pkgver(){
