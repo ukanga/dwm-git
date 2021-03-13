@@ -1,4 +1,5 @@
 *.xz
+*.zst
 src
 pkg
 dwm
