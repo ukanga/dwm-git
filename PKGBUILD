@@ -1,6 +1,6 @@
 pkgname=dwm-git
 _pkgname=dwm
-pkgver=6.2.r11.g7162335
+pkgver=6.3.r0.gd39e2f3
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
@@ -26,9 +26,9 @@ source=(dwm.desktop
         dwm-hide_vacant_tags-6.2.diff
         dwm-activetagindicatorbar-6.2-1.diff
         dwm-vanitygaps-20200503-9fc59bf.diff
-        dwm-statuscolors-20200503-25f74ad.diff
-        dwm-swallow-20200609-312bb44.diff
-        dwm-myconfig-202007051952-f8b104d.diff
+        dwm-statuscolors-20220121-84f9a96.diff
+        dwm-swallow-20220121-9f84b9e5.diff
+        dwm-myconfig-20220121-d26f598.diff
         )
 md5sums=(939f403a71b6e85261d09fc3412269ee
          'SKIP'
@@ -44,9 +44,9 @@ md5sums=(939f403a71b6e85261d09fc3412269ee
          c446b71a8b8cce25db86a47805500dfa
          61d820c506cf764f69b25d2e421a7705
          e26502e331d8db2c669fe6a1cbd0efa5
-         5835f93e81555436a4916a968478845a
-         0e165cee9f40d92d15b8049e579c6d30
-         c84d8430eeb31f1b05411922060b5514
+         fa11e3b1f73d65ddcc97dec296a616b4
+         9f84b9e550b11b7f95347d09875e6478
+         715a9748eb0c373a3d3573996fe2c5ae
          ) # so you can customize config.h
 
 pkgver(){
