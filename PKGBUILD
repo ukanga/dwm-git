@@ -1,6 +1,6 @@
 pkgname=dwm-git
 _pkgname=dwm
-pkgver=6.3.r0.gd39e2f3
+pkgver=6.4.r4.g348f655
 pkgrel=1
 pkgdesc="A dynamic window manager for X"
 url="http://dwm.suckless.org"
@@ -19,16 +19,14 @@ source=(dwm.desktop
         dwm-autostart-20161205-bb3bd6f.diff
         dwm-emptyview-6.2.diff
         dwm-combo-6.1.diff
-        dwm-centeredmaster-20160719-56a31dc.diff
-        dwm-gridmode-20170909-ceac8c9-1.diff
         dwm-cyclelayouts-20180524-6.2-1.diff
         dwm-pertag-6.2-1.diff
         dwm-hide_vacant_tags-6.2.diff
         dwm-activetagindicatorbar-6.2-1.diff
-        dwm-vanitygaps-20200503-9fc59bf.diff
+        dwm-cfacts-vanitygaps-6.4_combo.diff
         dwm-statuscolors-20220121-84f9a96.diff
-        dwm-swallow-20220121-9f84b9e5.diff
-        dwm-myconfig-20220121-d26f598.diff
+        dwm-swallow-6.4.diff
+        dwm-myconfig-6.4.diff
         )
 md5sums=(939f403a71b6e85261d09fc3412269ee
          'SKIP'
@@ -37,16 +35,14 @@ md5sums=(939f403a71b6e85261d09fc3412269ee
          b50863cbb92ea2fbf60cf4474e30cb36
          3c5c1d304c948d692082cf657e0b3b7c
          b0a3ea638271f42d410bf9393ccce49d
-         0051114992d940bc2ce1ed9ddcdcd8f8
-         8f3351056a226997e67c6ff58af32a72
-         de4197bcfba7af9d0517932c13f88fcf
+         'SKIP'
          e8501d039a68e9a106233b1d096ac017
          c446b71a8b8cce25db86a47805500dfa
          61d820c506cf764f69b25d2e421a7705
-         e26502e331d8db2c669fe6a1cbd0efa5
+         'SKIP'
          fa11e3b1f73d65ddcc97dec296a616b4
-         9f84b9e550b11b7f95347d09875e6478
-         715a9748eb0c373a3d3573996fe2c5ae
+         'SKIP'
+         'SKIP'
          ) # so you can customize config.h
 
 pkgver(){
